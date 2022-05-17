@@ -30,8 +30,8 @@ class Controller extends BaseController
             $timesPerDay = $request->daily;
         }
 
-        
-        \DB::insert('insert into subjects (name, cohort, date_of_birth, frequency, times_per_day) values (?,?,?,?,?)', 
+
+        \DB::insert('insert into participants (name, cohort, date_of_birth, frequency, times_per_day) values (?,?,?,?,?)', 
                     [$request->first_name, $cohort, $request->date_of_birth, $request->frequency, $timesPerDay]);
 
 
