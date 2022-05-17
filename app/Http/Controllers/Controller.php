@@ -21,7 +21,6 @@ class Controller extends BaseController
                 'verified' => false,
             ]);
         } 
-
         
         $cohort = 'A';
         $timesPerDay = Null;
@@ -29,7 +28,6 @@ class Controller extends BaseController
             $cohort = 'B';
             $timesPerDay = $request->daily;
         }
-
 
         \DB::insert('insert into participants (name, cohort, date_of_birth, frequency, times_per_day) values (?,?,?,?,?)', 
                     [$request->first_name, $cohort, $request->date_of_birth, $request->frequency, $timesPerDay]);
@@ -39,7 +37,6 @@ class Controller extends BaseController
             'verified'  => true,
             'name'      => $request->first_name,
             'cohort'    => $cohort,
-
         ]);
     }
 }

@@ -1,6 +1,6 @@
 @extends('templates.master')
  
-@section('title', 'Page Title')
+@section('title', 'Participation Form')
 
 
 @section('content')

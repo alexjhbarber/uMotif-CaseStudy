@@ -1,6 +1,6 @@
 @extends('templates.master')
  
-@section('title', 'Page Title')
+@section('title', 'Results Page')
 
 
 @section('content')
@@ -8,7 +8,7 @@
 
 
 @if($verified)
-    verified
+    
 @else
     not verified
 @endif
