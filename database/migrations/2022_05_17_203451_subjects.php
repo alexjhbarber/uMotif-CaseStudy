@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('cohort');
             $table->timestamp('date_of_birth');
-            
+            $table->string('frequency');
+            $table->string('times_per_day')->nullable();
         });
-    
     }
 
     /**
@@ -31,7 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
         Schema::drop('subjects');
     }
 };

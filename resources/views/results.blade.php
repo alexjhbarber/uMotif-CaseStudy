@@ -7,10 +7,10 @@
 
 
 
-    <p>This is my body content.</p>
+@if($verified)
+    verified
+@else
+    not verified
+@endif
 
-
-
-
-    
 @endsection
