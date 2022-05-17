@@ -1,3 +1,8 @@
 label{
     color: red;
 }
+
+
+#numPerDay{
+    display:none;
+}
