@@ -4,9 +4,9 @@ $('#frequency').change(function() {
     //show or hide Num per day depending on frequency of migranes
     console.log(this.value);
     if(this.value == 'Daily'){
-        $('#numPerDay').show();
+        $('#numPerDay').show('slow');
     }else{
-        $('#numPerDay').hide();
+        $('#numPerDay').hide('slow');
     }
 });
 
@@ -17,20 +17,30 @@ function validateForm() {
     let freq = document.forms["participantForm"]["frequency"].value;
     let perD = document.forms["participantForm"]["daily"].value;
 
+    $('.formInput').each(function(){
+        $(this).removeClass('error');
+    });
+    
+    result = true;
+
     if(name == "") {
-      alert("Name must be filled out");
-      return false;
+        $('#name').addClass('error');
+        result = false;
     }
     if(dob == ""){
-        alert("Date Of Birth must be filled out");
-        return false;
+        $('#dob').addClass('error');
+        result = false;
     }
     if(freq == ""){
-        alert("Frequency must be filled out");
-        return false;
+        $('#freq').addClass('error');
+        result = false;
     }
     if(freq == 'Daily' && perD == ""){
-        alert("Amount per day must be filled out");
-        return false;
+        $('#numPerDay').addClass('error');
+        result = false;
+    }
+    
+    if(result){
+        $('#participantForm').submit();
     }
 }

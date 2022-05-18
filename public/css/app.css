@@ -1,8 +1,66 @@
-label{
-    color: red;
+.container{
+    width: 50vw;
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgb(201, 201, 201);
 }
 
+
+.formInput{
+    /* margin: 10px; */
+    position:relative;
+    display: inline;
+}
+.formInput p{
+    display: inline-block;
+}
 
 #numPerDay{
     display:none;
 }
+
+.formInput label{
+    display: none;
+}
+
+.formInput input{
+    border-style: hidden;
+   
+}
+
+.formInput select{
+    border-style: hidden;
+}
+
+.formInput.error input{
+    background-color: rgba(255, 0, 0, 0.494);
+    color: white;
+    
+}
+.formInput.error select{
+    background-color: rgba(255, 0, 0, 0.494);
+    color: white;
+}
+.formInput.error p{
+    /* margin-bottom: 0px; */
+}
+.formInput.error {
+    margin-bottom: 16px;
+}
+
+
+.formInput.error label{
+    display: block;
+    color: red;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
